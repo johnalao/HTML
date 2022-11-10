@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Dice</title>
+    <style>
+        div.dice{
+            width: 32px;
+            background-color: aquamarine;
+            border: rosybrown solid 5px;
+            padding: 10px;
+            margin: 10px;
+            text-align: center;
+            font-size: 24px;
+
+        }
+        button{
+            width: 80px;
+            height: 40px;
+            background-color: aqua;
+            border: 5px solid black;
+        }
+        
+    </style>
+    <script defer>
+        function rollDie(){
+            var die1=document.getElementById("die1");
+            var die2=document.getElementById("die2");
+            var status = document.getElementById("status");
+            d1 = Math.floor(Math.random()*6)+1;
+            d2 = Math.floor(Math.random()*6)+1;
+            d3 = Math.floor(Math.random()*6)+1;
+            d4 = Math.floor(Math.random()*6)+1;
+            diceTotal= d1 + d2 + d3 + d4
+            die1.innerHTML = d1
+            die2.innerHTML = d2
+            die3.innerHTML = d1
+            die4.innerHTML = d2
+            status.innerHTML = "You rolled " + diceTotal
+            if (d1 == d2 == d3 == d4)
+                status.innerHTML = "You rolled " + diceTotal + ". Doubles, you have a free run"
+        }
+
+    </script>
+</head>
+<body>
+    <div class="dice" id="die1">0</div>
+    <div class="dice" id="die2">0</div>
+    <div class="dice" id="die3">0</div>
+    <div class="dice" id="die4">0</div>
+    <button onclick="rollDie()">Roll Dice</button>
+    <h2 id="status" style="clear:left"></h2>
+
+</body>
+</html>

@@ -1,0 +1,116 @@
+<!DOCTYPE html>
+<!-- saved from url=(0036)http://127.0.0.1:5500/homework.html# -->
+<html lang="en"><head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+    
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Homework</title>
+    <style>
+        .header{
+            padding: 10px;
+            background-color: #3333ff;
+            color: white;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            flex-wrap: wrap;
+            overflow: hidden;
+        }
+
+        .header input[type=text] {
+            float: right;
+            padding: 6px;
+            border: none;
+            font-size: 17px;
+            width: 200px;
+            margin-left: auto;
+            margin-right: 10px;
+
+        }
+
+
+
+        .nav a{
+        color: white;
+        text-decoration: none;
+        display: block;
+        float:left;
+        }
+
+        .nav{
+        list-style: none;
+        margin: 0%;
+        padding: 0%;
+        display: flex;
+        
+        }
+        .nav li{
+        margin-left: 10px;
+        }
+
+        .go{
+        background-color: white;
+        color: black;
+        text-decoration: none;
+        border-radius: 10px;
+        font-size: 1.18rem;
+        display: inline-block;
+        padding: 10px;
+        }
+        
+
+        
+    </style>
+</head>
+
+<body data-new-gr-c-s-check-loaded="14.1080.0" data-gr-ext-installed="">
+    <div class="header">
+        <ul class="nav">
+            <li><a href="http://127.0.0.1:5500/homework.html#">Home</a></li>
+            <li><a href="http://127.0.0.1:5500/homework.html#">About us</a></li>
+            <li><a href="http://127.0.0.1:5500/homework.html#">Services</a></li>
+            <li><a href="http://127.0.0.1:5500/homework.html#">Contact us</a></li>
+        </ul>
+        <input type="text" placeholder="Search" aria-label="Close">
+        <a href="http://127.0.0.1:5500/homework.html#" class="go">Go</a>
+    </div>
+<!-- Code injected by live-server -->
+<script>
+	// <![CDATA[  <-- For SVG support
+	if ('WebSocket' in window) {
+		(function () {
+			function refreshCSS() {
+				var sheets = [].slice.call(document.getElementsByTagName("link"));
+				var head = document.getElementsByTagName("head")[0];
+				for (var i = 0; i < sheets.length; ++i) {
+					var elem = sheets[i];
+					var parent = elem.parentElement || head;
+					parent.removeChild(elem);
+					var rel = elem.rel;
+					if (elem.href && typeof rel != "string" || rel.length == 0 || rel.toLowerCase() == "stylesheet") {
+						var url = elem.href.replace(/(&|\?)_cacheOverride=\d+/, '');
+						elem.href = url + (url.indexOf('?') >= 0 ? '&' : '?') + '_cacheOverride=' + (new Date().valueOf());
+					}
+					parent.appendChild(elem);
+				}
+			}
+			var protocol = window.location.protocol === 'http:' ? 'ws://' : 'wss://';
+			var address = protocol + window.location.host + window.location.pathname + '/ws';
+			var socket = new WebSocket(address);
+			socket.onmessage = function (msg) {
+				if (msg.data == 'reload') window.location.reload();
+				else if (msg.data == 'refreshcss') refreshCSS();
+			};
+			if (sessionStorage && !sessionStorage.getItem('IsThisFirstTime_Log_From_LiveServer')) {
+				console.log('Live reload enabled.');
+				sessionStorage.setItem('IsThisFirstTime_Log_From_LiveServer', true);
+			}
+		})();
+	}
+	else {
+		console.error('Upgrade your browser. This Browser is NOT supported WebSocket for Live-Reloading.');
+	}
+	// ]]>
+</script>
+
+</body><grammarly-desktop-integration data-grammarly-shadow-root="true"></grammarly-desktop-integration></html>

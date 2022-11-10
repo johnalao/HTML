@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Expression</title>
+    <style>
+        input::-webkit-outer-spin-button,
+        input::-webkit-inner-spin-button {
+        -webkit-appearance: none;
+  margin: 0;
+}
+        button{
+            width: 100px;
+            height: 30px;
+            margin: 20px;
+
+
+        }
+        .container{
+            border: 5px solid black;
+            text-align: center;
+            width: 600px;
+            font-size: 20px;
+            background-color: gray;
+            margin: auto;
+        }
+    </style>
+    <script defer>
+        function compute(){
+            var x = parseInt(document.getElementById('myx').value);
+            var y = parseInt(document.getElementById('myy').value);
+            var result = parseInt(document.getElementById('result').value); 
+            if(x>=y){
+                g=(x+y)/(x-y);
+            }
+            else if (x==0 & y==0){
+                    document.getElementById("result").innerHTML="Error: X, and Y can't be zero";
+                }
+
+            else{
+                (x-y+2)/(x-y);
+            }
+            
+            document.getElementById("result").value=g
+        }
+
+        function check(){
+            document.getElementById("myInputs").reset();
+            document.getElementById("myx").autofocus;
+
+        }
+
+
+    
+    </script>
+</head>
+<body>
+    <div class="container">
+    <h1>Compute Expression</h1>
+    <form id="myInputs">
+    <p><label width="100px">Enter X </label><input type="number" id="myx" aria-label="Close" autofocus required></p>
+    <p>Enter Y <input type="number" id="myy" aria-label="Close" required></p>
+    <p>Results <input id="result" aria-label="Close" disabled></p>
+    </form>    
+    
+    <div class="btn">
+        <p>===========================</p>
+        <button onclick="compute()">COMPUTE</button>
+        <button onclick="check()">RESET</button>
+
+    </div>
+    </div>
+</body>
+</html>

@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Grid Template</title>
+    <style>
+        .Header{grid-area: Header;}
+        .Menu{grid-area: Menu;}
+        .Main{grid-area: Main;}
+        .Right{grid-area: Right;}
+        .Footer{grid-area: Footer;}
+
+        .container{
+            display: grid;
+            grid-template-areas: 
+            "Header Header Header Header Header Header"
+            "Menu Main Main Main Right Right"
+            "Menu Footer Footer Footer Footer Footer" ;
+            gap: 10px;
+            color: black;
+            background-color: blue;
+            padding: 10px;
+        }
+        .Header{
+            gap: 50px;
+            padding: 30px;
+        }
+
+        .container >div{
+            background-color: rgba(255, 255, 255, .8);
+            text-align: center;
+            font-size: 30px;
+
+        }
+        .Main li{
+            list-style-type: none;
+            
+        }
+        .Footer{
+            text-align: center;
+            justify-content: center;
+            padding-top: 80px;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div class="Header">This is my website
+
+        </div>
+        <div class="Menu">
+            Main
+            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. At rem sed ut porro qui maxime esse quo cum reiciendis cumque? Qui unde quod repudiandae repellat temporibus dolores itaque! Earum, nihil.</p>
+            <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Doloremque possimus enim mollitia recusandae veniam rem saepe ipsa accusantium deserunt suscipit magnam adipisci similique ad aliquid doloribus, unde autem quae laudantium.</p>
+
+        </div>
+        <div class="Main">
+            Menu
+            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Vero expedita blanditiis ex sed, maxime a dolorum
+            </p>
+            <li>Item 1</li>
+            <li>Item 2</li>
+            <li>Item 3</li>
+            <li>Item 4</li>
+
+
+        </div>
+        <div class="Right">
+            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Enim expedita, culpa iure similique distinctio, maxime veniam, laudantium at commodi cupiditate veritatis exercitationem alias ut eius dicta aliquid animi placeat repellendus!</p>
+            <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Nobis quisquam explicabo quo libero. Commodi recusandae impedit sequi perferendis quod? Sint quasi amet, eos illo ipsam optio quidem ab expedita magnam.</p>
+
+        </div>
+        <div class="Footer">
+            Copy right @John 
+
+        </div>
+    </div>
+</body>
+</html>

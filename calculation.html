@@ -1,0 +1,165 @@
+<!DOCTYPE html>
+
+<html lang="en">
+
+<head>
+
+    <meta charset="UTF-8">
+
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Expression If</title>
+
+    <style>
+
+        *{
+
+            text-align: center;
+
+        }
+
+        h1{
+
+            border: 4px solid greenyellow;
+
+            width: 50%;
+
+            padding: 20px;
+
+            text-align: center;
+
+            margin: auto;
+
+            background-color: plum;
+
+            margin-bottom: 10px;
+
+           
+
+        }
+
+        .container{
+
+            border: 4px solid greenyellow;
+
+            width: 50%;
+
+            text-align: center;
+
+            margin: auto;
+
+            padding: 20px;
+
+            font-weight: bold;
+
+            font-size: 1.5em;
+
+            font-family:'Courier New', Courier, monospace;
+
+            background-color: plum;
+
+           
+
+        
+
+        }
+
+        button{
+
+            width: 80px;
+
+            height: 20px;
+
+            border: 2px solid greenyellow;
+
+           
+
+        }
+
+    </style>
+
+</head>
+
+<body onload="focus()">
+
+    <h1>Compute expression</h1>
+
+    <div class="container">
+
+        <p><label width="100px">Enter a number:</label><input id="x" required></p>
+
+        <p><label width="100px">Enter a number:</label><input id="y" required></p>
+
+        <button onclick="compute()">Compute</button>
+
+        <button onclick="mReset()">Reset</button>
+
+        <p>====================</p>
+
+        <p>Result:<input id="ans" disabled></p>
+
+    </div>
+
+    <script>
+
+        function mFocus(){
+
+            document.getElementById("x").focus();
+
+        }
+
+        function mFocus(){
+
+            document.getElementById("y").focus();
+
+        }
+
+        function mReset(){
+
+            document.getElementById("x").value="";
+
+            document.getElementById("ans").value="";
+
+            document.getElementById("x").focus();
+
+            document.getElementById("y").value="";
+
+            document.getElementById("ans").value="";
+
+            document.getElementById("y").focus();
+
+        }
+
+        function compute(){
+
+            var x=parseInt(document.getElementById("x").value);
+
+            var y=parseInt(document.getElementById("y").value);
+
+          
+
+            if (x>=y){
+
+                g=(x+y)/(x-y);
+
+            }
+
+            else (x<y)
+
+                g=(x+y-2)/(x-y);
+
+           
+
+            document.getElementById("ans").value=g;
+
+        }
+
+ 
+
+    </script>
+
+</body>
+
+</html>
